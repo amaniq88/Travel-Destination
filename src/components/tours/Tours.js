@@ -1,22 +1,16 @@
-function Tour(props){
+import './Tours.css';
+import Tour from './tour/Tour';
+
+
+function Tours(props){
    
     return(
         <>
-        {
-            props.data.map(trv=>{
-                return(
-                    <>
-                    <h1>Name : {trv.name} </h1>
-                    <img src={trv.image}/>
-                    </>
-                );
-            })
-        }
-          
+      <Tour data = {props.data}/>
         </>
         
             
     );
 }
 
-export default Tour;
+export default Tours;
