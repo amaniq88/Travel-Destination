@@ -1,36 +1,17 @@
 import './Tour.css';
-import { useState } from 'react';
-import TourDetails from '../../TourDetails/TourDetails';
+import React from 'react';
 
 
 
-function Tour(props){
-    const [click, setClick] = useState(0);
-    function handleClick(){
-        // alert('you are logged in !!')
-        setClick(!click);
-        console.log(click);
-
-        
-    }
+const Tour = ({tour})=>{      
 
     return(
-        <>
-        {
-            props.data.map(trv=>{
-                return(
-                    <>
-                    <h1>Name : {trv.name} </h1>
-                    <img src={trv.image} onClick={handleClick} />
-                    if (click ==  true ){
-                    <TourDetails ID={trv.name}/>
-                    }
-                    </>
-                );
-            })
-        }
-          
-        </>
+        <div className='tour'>
+            <h2>{tour.name}</h2>
+        <div className='tour-image'>
+            <img src={tour.image} alt="tour" />
+        </div> 
+        </div>
         
             
     );

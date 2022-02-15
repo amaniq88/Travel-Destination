@@ -1,8 +1,10 @@
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
 import Home from './components/home/Home';
-import TravelData from './data/db.json';
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Link} from 'react-router-dom'
 import TourDetails from './components/TourDetails/TourDetails';
+import TravelData from './data/db.json';
+
 
 
 
@@ -10,10 +12,9 @@ function App() {
   return (
     <div>
     <Routes>
-      <Route path="/" element={<home />} />
-      <Route path="/city/:id" element={<TourDetails />} /> 
+      <Route path="/" element={<Home data={TravelData} />} />
+      <Route path="/tour/:id" element={<TourDetails  data={TravelData }/>} /> 
     </Routes>
-      <Home data = {TravelData}/>
     </div>
     
 
