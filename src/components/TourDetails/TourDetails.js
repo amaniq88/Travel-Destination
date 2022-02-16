@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from "/mnt/c/Users/96278/my-app/src/data/db.json";
+import data from "../../data/db.json";
 
 
 import {
